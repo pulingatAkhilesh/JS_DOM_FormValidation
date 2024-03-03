@@ -1,0 +1,39 @@
+<html lang="en">
+	<head>
+		<title>JS DOM</title>
+		<link rel="stylesheet" href="formValidation.css">
+	</head>
+	<body>
+		<div class="form-container">
+			<h1 class="form-title">Sign up Form</h1>
+			<form class="form" action="success.html" onsubmit="return validateForm()">
+				<div class="form-input">
+					<label for="userName">Username:</label>
+					<input id="userName" type="text" onkeyup="validateName()">
+					<span id="userName-error"></span>
+				</div>
+				<div class="form-input">
+					<label for="email">E-Mail:</label>
+					<input id="email" type="text" onkeyup="validateEmail()">
+					<span id="email-error"></span>
+				</div>
+
+				<div class="form-input">
+					<label for="password">Password:</label>
+					<input id="password" type="text" onkeyup="validatePassword()">
+					<span id="password-error"></span>
+				</div>
+				<div class="form-input">
+					<label for="repeatPassword">Repeat Password:</label>
+					<input id="repeatPassword" type="text" onkeyup="validateRepeatPassword()">
+					<span id="repeatPassword-error"></span>
+				</div>
+				<div class="submit-container">
+					<button class="btn-submit" id="submit" type="submit" onclick="return validateForm()">Submit</button>
+					<span id="submit-error"></span>
+				</div>
+			</form>
+		</div>
+		<script src="formValidation.js"></script>
+	</body>
+</html>
